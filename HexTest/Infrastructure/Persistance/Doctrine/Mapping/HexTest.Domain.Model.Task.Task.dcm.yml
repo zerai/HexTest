@@ -1,0 +1,11 @@
+HexTest\Domain\Model\Task\Task:
+  type: entity
+  table: task
+  id:
+    taskId:
+      column: id
+      type: TaskId
+  repositoryClass: HexTest\Infrastructure\Domain\Model\Task\DoctrineTaskRepository
+  fields:
+    name:
+      type: string

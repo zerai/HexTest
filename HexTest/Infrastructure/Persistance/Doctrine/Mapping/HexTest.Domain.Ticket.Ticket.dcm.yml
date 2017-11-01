@@ -1,0 +1,37 @@
+#HexTest\Domain\Customer:
+#  type: entity
+#  table: customer
+#  repositoryClass: HexTesr\Domain\Customer\Repository # Lw\Infrastructure\Domain\Model\Wish\DoctrineWishRepository
+#  id:
+#    wishId:
+#      column: id
+#      type: WishId
+#  fields:
+#    address:
+#      type: string
+#    content:
+#      type: text
+#    userId:
+#      type: UserId
+#      column: user_id
+
+
+HexTest\Domain\Ticket\Ticket:
+    type: entity
+    table: ticket
+    repositoryClass: HexTest\Infrastructure\Domain\Model\Ticket\DoctrineTicketRepository
+    id:
+        id:
+            type: string
+            generator: { strategy: NONE }
+    fields:
+        customerId:
+          type: integer
+        trainNumber:
+          type: integer
+        departure:
+          type: datetime
+        seatNumber:
+          type: integer
+        PNR:
+          type: string
