@@ -1,0 +1,11 @@
+HexTest\Domain\Product\Product2:
+  type: entity
+  table: products2
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
