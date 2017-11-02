@@ -26,9 +26,10 @@ class AlphaCreateCommand extends Command
         $app = $this->getApplication()->getContainer();
 
 
-        $repo = $app['user_repository']; var_dump($repo);
+        $repo = $app['user_repository'];
+        var_dump($repo);
 
-        $user = new User('223','example@example.com','pippo');
+        $user = new User('223', 'example@example.com', 'pippo');
 
         $repo->add($user);
         //$repo->flush();

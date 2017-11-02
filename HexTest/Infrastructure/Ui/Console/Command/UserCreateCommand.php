@@ -2,7 +2,6 @@
 
 namespace HexTest\Infrastructure\Ui\Console\Command;
 
-
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -11,7 +10,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 use HexTest\Domain\Model\User\User;
 use HexTest\Domain\Model\User\UserId;
-
 
 class UserCreateCommand extends Command
 {
@@ -32,7 +30,7 @@ class UserCreateCommand extends Command
 
         $userId = new UserId();
 
-        $user = new User($userId,'1_example@example.com','pippo'); //echo $user->email();
+        $user = new User($userId, '1_example@example.com', 'pippo'); //echo $user->email();
 
         $repo->add($user);
         //$repo->flush();

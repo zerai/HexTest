@@ -2,7 +2,6 @@
 
 namespace HexTest\Infrastructure\Persistance\Doctrine;
 
-
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
 
@@ -47,6 +46,5 @@ class EntityManagerFactory
         $em->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('UserId', 'UserId');
 
         return $em;
-
     }
 }

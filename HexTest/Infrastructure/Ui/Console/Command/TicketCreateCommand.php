@@ -2,7 +2,6 @@
 
 namespace HexTest\Infrastructure\Ui\Console\Command;
 
-
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -28,7 +27,7 @@ class TicketCreateCommand extends Command
 
         $repo = $app['ticket_repository']; //var_dump($repo);
 
-        $ticket = new Ticket('2222343357722122','22','33',new \DateTime('now'),'55','66'); //echo $user->email();
+        $ticket = new Ticket('2222343357722122', '22', '33', new \DateTime('now'), '55', '66'); //echo $user->email();
 
         $repo->add($ticket);
 
@@ -36,6 +35,6 @@ class TicketCreateCommand extends Command
         //$repo->flush();
 
 
-        $output->writeln(sprintf(' <info>Ticket created!</info> - <comment>%d</comment>', $ticket->getPNR()  ));
+        $output->writeln(sprintf(' <info>Ticket created!</info> - <comment>%d</comment>', $ticket->getPNR()));
     }
 }

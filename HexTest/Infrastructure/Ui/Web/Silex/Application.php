@@ -35,8 +35,6 @@ use Doctrine\ORM\EntityManager;
 //use HexTest\Infrastructure\Persistence\Doctrine\EntityManagerFactory;
 use HexTest\Infrastructure\Persistance\Doctrine\EntityManagerFactory;
 
-
-
 class Application
 {
     public static function bootstrap()

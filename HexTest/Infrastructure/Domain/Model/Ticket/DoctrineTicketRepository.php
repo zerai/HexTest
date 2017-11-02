@@ -63,7 +63,6 @@ class DoctrineTicketRepository extends EntityRepository implements TicketReposit
      */
     public function findById($id)
     {
-
     }
 
     /**
@@ -73,9 +72,5 @@ class DoctrineTicketRepository extends EntityRepository implements TicketReposit
     {
         $this->getEntityManager()->persist($ticket);
         $this->getEntityManager()->flush();
-
-
     }
-
-
 }

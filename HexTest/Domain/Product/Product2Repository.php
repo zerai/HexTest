@@ -2,7 +2,6 @@
 
 namespace HexTest\Domain\Product;
 
-
 use HexTest\Domain\Product\Product2;
 
 interface Repository

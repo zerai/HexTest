@@ -34,11 +34,10 @@ class TaskCreateCommand extends Command
         //var_dump($taskId);
 
 
-        $task = new Task($taskId,'Inviare report al capo!!');
+        $task = new Task($taskId, 'Inviare report al capo!!');
 
         $repo->add($task);
 
         $output->writeln(sprintf(' <info>Task created with name: </info><comment>%s</comment>', $task->name()));
-
     }
 }

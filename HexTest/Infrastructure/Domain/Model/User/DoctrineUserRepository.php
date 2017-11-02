@@ -36,8 +36,6 @@ class DoctrineUserRepository extends EntityRepository implements UserRepository
     {
         $this->getEntityManager()->persist($user);
         $this->getEntityManager()->flush();
-
-
     }
 
     /**

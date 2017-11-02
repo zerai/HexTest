@@ -5,8 +5,8 @@ use Ramsey\Uuid\Uuid;
 use Assert\Assertion;
 use Assert\AssertionFailedException;
 
-
-Class TaskId {
+class TaskId
+{
 
     /**
      * @var string
@@ -16,11 +16,11 @@ Class TaskId {
     /**
      * @param string $id
      */
-    public function __construct( $id = null )
+    public function __construct($id = null)
     {
         try {
             Assertion::uuid($id, "Not valid UUID.");
-        } catch(AssertionFailedException $e) {
+        } catch (AssertionFailedException $e) {
             $e->getValue(); // the value that caused the failure
             $e->getConstraints(); // the additional constraints of the assertion.
         }
@@ -53,6 +53,4 @@ Class TaskId {
     {
         return $this->id();
     }
-
-
 }

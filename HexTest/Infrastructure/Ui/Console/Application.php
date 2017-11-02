@@ -2,8 +2,6 @@
 
 namespace HexTest\Infrastructure\Ui\Console;
 
-
-
 class Application extends \Symfony\Component\Console\Application
 {
     private $container;

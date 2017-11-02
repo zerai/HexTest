@@ -12,7 +12,7 @@ interface TaskRepository
      *
      * @return Task
      */
-    public function ofId( TaskId $taskId);
+    public function ofId(TaskId $taskId);
 
 //    /**
 //     * @param string $email

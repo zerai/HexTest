@@ -2,7 +2,6 @@
 
 namespace HexTest\Domain\Model\Task;
 
-
 class Task
 {
     const MAX_LENGTH_NAME = 255;
@@ -51,5 +50,4 @@ class Task
     {
         return $this->name;
     }
-
 }

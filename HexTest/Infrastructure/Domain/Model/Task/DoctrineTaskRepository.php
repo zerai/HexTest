@@ -36,8 +36,6 @@ class DoctrineTaskRepository extends EntityRepository implements TaskRepository
     {
         $this->getEntityManager()->persist($task);
         $this->getEntityManager()->flush();
-
-
     }
 
     /**

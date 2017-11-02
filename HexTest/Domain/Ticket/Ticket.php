@@ -2,7 +2,6 @@
 
 namespace HexTest\Domain\Ticket;
 
-
 class Ticket
 {
     private $id;
