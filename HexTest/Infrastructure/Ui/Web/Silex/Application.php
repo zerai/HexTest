@@ -25,6 +25,8 @@ namespace HexTest\Infrastructure\Ui\Web\Silex ;
 //use Lw\Infrastructure\Persistence\Doctrine\EntityManagerFactory;
 //use Lw\Infrastructure\Service\HttpUserAdapter;
 //use Lw\Infrastructure\Service\TranslatingUserService;
+use HexTest\Application\Service\User\ViewUserRequest;
+use HexTest\Application\Service\User\ViewUserService;
 use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\MonologServiceProvider;
 use Silex\Provider;
@@ -67,6 +69,29 @@ class Application
                 'dbname'   => 'app',
             ),
         ));
+
+
+
+        // All you need to do is pass an array mapping your command class names to
+// your handler instances. Everything else is already setup.
+        \League\Tactician\Setup\QuickStart::create(
+            [
+                ViewUserRequest::class      => ViewUserService::class ,
+                //AddTaskCommand::class      => $someHandler,
+                //CompleteTaskCommand::class => $someOtherHandler
+            ]
+        );
+
+
+
+        $app['view_user_application_service'] = $app->share(function ($app) {
+            return new ViewUserService(
+                $app['user_repository']
+                //$app['wish_repository']
+            );
+        });
+
+
 
 
 

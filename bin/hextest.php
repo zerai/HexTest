@@ -10,4 +10,5 @@ $application->add(new \HexTest\Infrastructure\Ui\Console\Command\AlphaCreateComm
 $application->add(new \HexTest\Infrastructure\Ui\Console\Command\UserCreateCommand());
 $application->add(new \HexTest\Infrastructure\Ui\Console\Command\TicketCreateCommand());
 $application->add(new \HexTest\Infrastructure\Ui\Console\Command\TaskCreateCommand());
+$application->add(new \HexTest\Infrastructure\Ui\Console\Command\UserViewCommand());
 $application->run();
