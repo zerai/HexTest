@@ -1,0 +1,5 @@
+suites:
+    acme_suite:
+        #namespace: HexTest
+        psr4_prefix:
+        src_path: .

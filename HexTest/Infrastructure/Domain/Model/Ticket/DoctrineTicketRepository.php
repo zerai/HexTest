@@ -12,7 +12,7 @@ class DoctrineTicketRepository extends EntityRepository implements TicketReposit
 //    /**
 //     * @param UserId $userId
 //     *
-//     * @return User
+//     * @return JobPosting
 //     */
 //    public function ofId( $userId) //UserId
 //    {
@@ -22,7 +22,7 @@ class DoctrineTicketRepository extends EntityRepository implements TicketReposit
 //    /**
 //     * @param string $email
 //     *
-//     * @return User
+//     * @return JobPosting
 //     */
 //    public function ofEmail($email)
 //    {
@@ -30,9 +30,9 @@ class DoctrineTicketRepository extends EntityRepository implements TicketReposit
 //    }
 //
 //    /**
-//     * @param User $user
+//     * @param JobPosting $user
 //     */
-//    public function add(User $user)
+//    public function add(JobPosting $user)
 //    {
 //        $this->getEntityManager()->persist($user);
 //        $this->getEntityManager()->flush();

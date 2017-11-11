@@ -1,11 +1,11 @@
-HexTest\Domain\Model\User\User:
+HexTest\Domain\Model\JobPosting\JobPosting:
   type: entity
   table: user
   id:
     userId:
       column: id
       type: UserId
-  repositoryClass: HexTest\Infrastructure\Domain\Model\User\DoctrineUserRepository
+  repositoryClass: HexTest\Infrastructure\Domain\Model\JobPosting\DoctrineUserRepository
   fields:
     email:
       type: string

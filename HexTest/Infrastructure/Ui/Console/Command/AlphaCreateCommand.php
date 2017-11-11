@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use HexTest\Domain\Model\User\User;
+use HexTest\Domain\Model\User\JobPosting;
 
 class AlphaCreateCommand extends Command
 {
@@ -29,7 +29,7 @@ class AlphaCreateCommand extends Command
         $repo = $app['user_repository'];
         var_dump($repo);
 
-        $user = new User('223', 'example@example.com', 'pippo');
+        $user = new JobPosting('223', 'example@example.com', 'pippo');
 
         $repo->add($user);
         //$repo->flush();

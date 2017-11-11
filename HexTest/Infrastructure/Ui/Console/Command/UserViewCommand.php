@@ -9,7 +9,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 
-use HexTest\Domain\Model\User\User;
+use HexTest\Domain\Model\User\JobPosting;
 use HexTest\Domain\Model\User\UserId;
 
 class UserViewCommand extends Command
@@ -34,10 +34,10 @@ class UserViewCommand extends Command
 
         $output->writeln(
             [
-                'User Info',
+                'JobPosting Info',
                 '========',
-                sprintf(' <info>User email = </info> - <comment>%s</comment>', $user->email()),
-                sprintf(' <info>User Id = </info> - <comment>%s</comment>', $user->id())
+                sprintf(' <info>JobPosting email = </info> - <comment>%s</comment>', $user->email()),
+                sprintf(' <info>JobPosting Id = </info> - <comment>%s</comment>', $user->id())
             ]
         );
     }

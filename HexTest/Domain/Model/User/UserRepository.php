@@ -10,21 +10,21 @@ interface UserRepository
     /**
      * @param UserId $userId
      *
-     * @return User
+     * @return JobPosting
      */
     public function ofId(UserId $userId); //UserId
 
     /**
      * @param string $email
      *
-     * @return User
+     * @return JobPosting
      */
     public function ofEmail($email);
 
     /**
-     * @param User $user
+     * @param JobPosting $user
      */
-    public function add(User $user);
+    public function add(JobPosting $user);
 
     /**
      * @return UserId

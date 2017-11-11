@@ -9,19 +9,19 @@ namespace HexTest\Infrastructure\Ui\Web\Silex ;
 //use Ddd\Infrastructure\Application\Service\DoctrineSession;
 //use GuzzleHttp\Client;
 //use Lw\Application\DataTransformer\Jobposting\JobpostingDtoDataTransformer;
-//use Lw\Application\DataTransformer\User\UserDtoDataTransformer;
+//use Lw\Application\DataTransformer\JobPosting\UserDtoDataTransformer;
 //
-//use Lw\Application\Service\User\SignUpUserService;
-//use Lw\Application\Service\User\ViewBadgesService;
-//use Lw\Application\Service\User\ViewWishesService;
+//use Lw\Application\Service\JobPosting\SignUpUserService;
+//use Lw\Application\Service\JobPosting\ViewBadgesService;
+//use Lw\Application\Service\JobPosting\ViewWishesService;
 //use Lw\Application\Service\Wish\AddWishService;
 //use Lw\Application\Service\Wish\DeleteWishService;
 //use Lw\Application\Service\Wish\AggregateVersion\DeleteWishService as DeleterWishServiceAggregateVersion;
 //use Lw\Application\Service\Wish\AggregateVersion\AddWishService as AddWishServiceAggregateVersion;
 //use Lw\Application\Service\Wish\UpdateWishService;
 //use Lw\Application\Service\Wish\ViewWishService;
-//use Lw\Domain\Model\User\User;
-//use Lw\Infrastructure\Domain\Model\User\DoctrineUserFactory;
+//use Lw\Domain\Model\JobPosting\JobPosting;
+//use Lw\Infrastructure\Domain\Model\JobPosting\DoctrineUserFactory;
 //use Lw\Infrastructure\Persistence\Doctrine\EntityManagerFactory;
 //use Lw\Infrastructure\Service\HttpUserAdapter;
 //use Lw\Infrastructure\Service\TranslatingUserService;
@@ -96,7 +96,7 @@ class Application
 
 
         $app['user_repository'] = $app->share(function ($app) {
-            return $app['em']->getRepository('HexTest\Domain\Model\User\User');
+            return $app['em']->getRepository('HexTest\Domain\Model\User\JobPosting');
         });
 
 
@@ -191,7 +191,7 @@ class Application
 //        });
 //
 //        $app['user_repository'] = $app->share(function ($app) {
-//            return $app['em']->getRepository('Lw\Domain\Model\User\User');
+//            return $app['em']->getRepository('Lw\Domain\Model\JobPosting\JobPosting');
 //        });
 //
 //        $app['wish_repository'] = $app->share(function ($app) {
@@ -349,8 +349,8 @@ class Application
 //                ->createBuilder('form', null, [
 //                    'attr' => ['autocomplete' => 'off'],
 //                ])
-//                ->add('email', 'email', ['attr' => ['maxlength' => User::MAX_LENGTH_EMAIL, 'class' => 'form-control'], 'label' => 'Email'])
-//                ->add('password', 'password', ['attr' => ['maxlength' => User::MAX_LENGTH_PASSWORD, 'class' => 'form-control'], 'label' => 'Password'])
+//                ->add('email', 'email', ['attr' => ['maxlength' => JobPosting::MAX_LENGTH_EMAIL, 'class' => 'form-control'], 'label' => 'Email'])
+//                ->add('password', 'password', ['attr' => ['maxlength' => JobPosting::MAX_LENGTH_PASSWORD, 'class' => 'form-control'], 'label' => 'Password'])
 //                ->add('submit', 'submit', ['attr' => ['class' => 'btn btn-primary btn-lg btn-block'], 'label' => 'Sign up'])
 //                ->getForm();
 //        });
@@ -360,8 +360,8 @@ class Application
 //                ->createBuilder('form', null, [
 //                    'attr' => ['autocomplete' => 'off'],
 //                ])
-//                ->add('email', 'email', ['attr' => ['maxlength' => User::MAX_LENGTH_EMAIL, 'class' => 'form-control'], 'label' => 'Email'])
-//                ->add('password', 'password', ['attr' => ['maxlength' => User::MAX_LENGTH_PASSWORD, 'class' => 'form-control'], 'label' => 'Password'])
+//                ->add('email', 'email', ['attr' => ['maxlength' => JobPosting::MAX_LENGTH_EMAIL, 'class' => 'form-control'], 'label' => 'Email'])
+//                ->add('password', 'password', ['attr' => ['maxlength' => JobPosting::MAX_LENGTH_PASSWORD, 'class' => 'form-control'], 'label' => 'Password'])
 //                ->add('submit', 'submit', ['attr' => ['class' => 'btn btn-primary btn-lg btn-block'], 'label' => 'Sign in'])
 //                ->getForm();
 //        });

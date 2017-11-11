@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 
-use HexTest\Domain\Model\User\User;
+use HexTest\Domain\Model\User\JobPosting;
 use HexTest\Domain\Model\User\UserId;
 
 class UserCreateCommand extends Command
@@ -30,11 +30,11 @@ class UserCreateCommand extends Command
 
         $userId = new UserId();
 
-        $user = new User($userId, '1_example@example.com', 'pippo'); //echo $user->email();
+        $user = new JobPosting($userId, '1_example@example.com', 'pippo'); //echo $user->email();
 
         $repo->add($user);
         //$repo->flush();
 
-        $output->writeln(sprintf(' <info>User created with id = </info> - <comment>%s</comment>', $user->email()));
+        $output->writeln(sprintf(' <info>JobPosting created with id = </info> - <comment>%s</comment>', $user->email()));
     }
 }

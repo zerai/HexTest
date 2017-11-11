@@ -22,7 +22,7 @@ class DoctrineTaskRepository extends EntityRepository implements TaskRepository
 //    /**
 //     * @param string $email
 //     *
-//     * @return User
+//     * @return JobPosting
 //     */
 //    public function ofEmail($email)
 //    {

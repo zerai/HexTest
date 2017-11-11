@@ -17,7 +17,7 @@ interface TaskRepository
 //    /**
 //     * @param string $email
 //     *
-//     * @return User
+//     * @return JobPosting
 //     */
 //    public function ofEmail($email);
 

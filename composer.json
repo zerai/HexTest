@@ -12,7 +12,8 @@
         "symfony/yaml": "^3.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.4"
+        "phpunit/phpunit": "^6.4",
+        "phpspec/phpspec": "^3.4"
     },
     "config": {
         "preferred-install": {
@@ -23,11 +24,13 @@
     "autoload": {
         "psr-4": {
             "HexTest\\": "HexTest/"
+
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "HexTest\\Tests\\": "tests/"
+            "HexTest\\Tests\\": "tests/",
+            "spec\\": "spec/"
         }
     },
     "scripts": {

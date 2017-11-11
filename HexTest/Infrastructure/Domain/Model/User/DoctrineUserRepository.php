@@ -3,7 +3,7 @@
 namespace HexTest\Infrastructure\Domain\Model\User;
 
 use Doctrine\ORM\EntityRepository;
-use HexTest\Domain\Model\User\User;
+use HexTest\Domain\Model\User\JobPosting;
 use HexTest\Domain\Model\User\UserId;
 use HexTest\Domain\Model\User\UserRepository;
 
@@ -12,7 +12,7 @@ class DoctrineUserRepository extends EntityRepository implements UserRepository
     /**
      * @param UserId $userId
      *
-     * @return User
+     * @return JobPosting
      */
     public function ofId(UserId $userId) //UserId
     {
@@ -22,7 +22,7 @@ class DoctrineUserRepository extends EntityRepository implements UserRepository
     /**
      * @param string $email
      *
-     * @return User
+     * @return JobPosting
      */
     public function ofEmail($email)
     {
@@ -30,9 +30,9 @@ class DoctrineUserRepository extends EntityRepository implements UserRepository
     }
 
     /**
-     * @param User $user
+     * @param JobPosting $user
      */
-    public function add(User $user)
+    public function add(JobPosting $user)
     {
         $this->getEntityManager()->persist($user);
         $this->getEntityManager()->flush();
